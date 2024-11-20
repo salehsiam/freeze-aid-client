@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout";
 import Login from "../pages/Auth/Login";
 import Register from "../pages/Auth/Register";
 import PrivateRoute from "./PrivateRoute";
+import Home from "../pages/HomePage/Home";
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <h2>this is Home</h2>,
+        element: <Home></Home>,
       },
       {
         path: "donation",
