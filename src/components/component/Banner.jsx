@@ -19,7 +19,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Banner = () => {
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="w-11/12 mx-auto my-12">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -34,9 +34,9 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="flex items-center">
+          <div className="flex flex-col md:flex-row lg:px-5 items-center">
             {/* Left Section: Images */}
-            <div className="w-3/5">
+            <div className="md:w-3/5">
               <img
                 src={bannerImg}
                 alt="Happy Child"
@@ -45,8 +45,8 @@ const Banner = () => {
             </div>
 
             {/* Right Section: Content */}
-            <div className="w-2/5">
-              <h2 className="text-5xl font-bold text-gray-800">
+            <div className="md:w-2/5 px-4">
+              <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold text-gray-800">
                 Donate Clothes and Share Warmth
               </h2>
               <p className="mt-4 text-gray-600">
@@ -62,10 +62,10 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex items-center">
+          <div className="flex flex-col-reverse md:flex-row lg:px-5 items-center">
             {/* Left Section: Images */}
-            <div className="w-2/5">
-              <h2 className="text-5xl font-bold text-gray-800">
+            <div className="md:w-2/5 px-4">
+              <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold text-gray-800">
                 Donate Clothes and Share Warmth
               </h2>
               <p className="mt-4 text-gray-600">
@@ -80,7 +80,7 @@ const Banner = () => {
             </div>
 
             {/* Right Section: Content */}
-            <div className="w-3/5">
+            <div className="md:w-3/5">
               <img
                 src={bannerImg2}
                 alt="Happy Child"
@@ -90,9 +90,9 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex items-center">
+          <div className="flex flex-col md:flex-row lg:px-5 items-center">
             {/* Left Section: Images */}
-            <div className="w-3/5">
+            <div className="md:w-3/5">
               <img
                 src={bannerImg3}
                 alt="Happy Child"
@@ -101,8 +101,8 @@ const Banner = () => {
             </div>
 
             {/* Right Section: Content */}
-            <div className="w-2/5">
-              <h2 className="text-5xl font-bold text-gray-800">
+            <div className="md:w-2/5 px-4">
+              <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold text-gray-800">
                 Donate Clothes and Share Warmth
               </h2>
               <p className="mt-4 text-gray-600">
@@ -118,10 +118,10 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex items-center">
+          <div className="flex flex-col-reverse md:flex-row lg:px-5 items-center">
             {/* Left Section: Images */}
-            <div className="w-2/5">
-              <h2 className="text-5xl font-bold text-gray-800">
+            <div className="md:w-2/5 px-4">
+              <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold text-gray-800">
                 Donate Clothes and Share Warmth
               </h2>
               <p className="mt-4 text-gray-600">
@@ -136,7 +136,7 @@ const Banner = () => {
             </div>
 
             {/* Right Section: Content */}
-            <div className="w-3/5">
+            <div className="md:w-3/5">
               <img
                 src={bannerImg4}
                 alt="Happy Child"

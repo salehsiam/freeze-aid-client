@@ -4,6 +4,9 @@ import Login from "../pages/Auth/Login";
 import Register from "../pages/Auth/Register";
 import PrivateRoute from "./PrivateRoute";
 import Home from "../pages/HomePage/Home";
+import Donation from "../pages/Donation/Donation";
+import DonationDetails from "../pages/Donation/DonationDetails";
+import HowToHelp from "../pages/HowToHelp";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +19,8 @@ const router = createBrowserRouter([
       },
       {
         path: "donation",
-        element: <h2>this is donation</h2>,
+        element: <Donation></Donation>,
+        loader: () => fetch("/campaigns.json"),
       },
       {
         path: "campaigns",
@@ -24,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: "how-to-help",
-        element: <h2>How to help</h2>,
+        element: <HowToHelp></HowToHelp>,
       },
       {
         path: "dashboard",
@@ -41,6 +45,15 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <Register></Register>,
+      },
+      {
+        path: "/campaign/:id",
+        element: (
+          <PrivateRoute>
+            <DonationDetails></DonationDetails>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/campaigns.json"),
       },
     ],
   },
