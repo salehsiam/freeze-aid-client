@@ -1,5 +1,7 @@
 const HowToHelp = () => {
-  return <div></div>;
+  return (
+    
+  );
 };
 
 export default HowToHelp;

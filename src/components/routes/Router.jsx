@@ -7,6 +7,8 @@ import Home from "../pages/HomePage/Home";
 import Donation from "../pages/Donation/Donation";
 import DonationDetails from "../pages/Donation/DonationDetails";
 import HowToHelp from "../pages/HowToHelp";
+import Dashboard from "../pages/Dashboard";
+import UpdateProfile from "../component/UpdateProfile";
 
 const router = createBrowserRouter([
   {
@@ -22,10 +24,7 @@ const router = createBrowserRouter([
         element: <Donation></Donation>,
         loader: () => fetch("/campaigns.json"),
       },
-      {
-        path: "campaigns",
-        element: <h2>Campaigns</h2>,
-      },
+
       {
         path: "how-to-help",
         element: <HowToHelp></HowToHelp>,
@@ -34,7 +33,7 @@ const router = createBrowserRouter([
         path: "dashboard",
         element: (
           <PrivateRoute>
-            <h2>Dashboard</h2>,
+            <Dashboard></Dashboard>
           </PrivateRoute>
         ),
       },
@@ -54,6 +53,10 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch("/campaigns.json"),
+      },
+      {
+        path: "update-profile",
+        element: <UpdateProfile></UpdateProfile>,
       },
     ],
   },

@@ -1,9 +1,13 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const { userLogin, setUser } = useContext(AuthContext);
+  const [error, setError] = useState({});
+  const location = useLocation();
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
@@ -13,12 +17,13 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        // const errorCode = error.code;
+        const errorCode = error.code;
         // const errorMessage = error.message;
-        alert(error.code);
-        console.log(errorCode, errorMessage);
+        toast(errorCode);
+
         // ..
       });
   };
