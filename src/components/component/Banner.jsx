@@ -19,7 +19,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Banner = () => {
   return (
-    <div className="w-11/12 mx-auto my-12">
+    <div className=" w-11/12  mx-auto mb-2 ">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -27,25 +27,21 @@ const Banner = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
+        <SwiperSlide className="relative p-6">
           <div className="flex flex-col md:flex-row lg:px-5 items-center">
-            {/* Left Section: Images */}
             <div className="md:w-3/5">
+              <div className="absolute inset-0 rounded-xl  md:bg-gradient-to-r from-transparent to-blue-100 "></div>
               <img
                 src={bannerImg}
                 alt="Happy Child"
-                className="rounded-lg w-full"
+                className="rounded-lg w-full md:h-80 lg:h-[479px]"
               />
             </div>
 
-            {/* Right Section: Content */}
-            <div className="md:w-2/5 px-4">
+            <div className="md:w-2/5 z-10 px-4">
               <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold text-gray-800">
                 Donate Clothes and Share Warmth
               </h2>
@@ -61,10 +57,10 @@ const Banner = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="relative p-6">
           <div className="flex flex-col-reverse md:flex-row lg:px-5 items-center">
-            {/* Left Section: Images */}
-            <div className="md:w-2/5 px-4">
+            <div className="absolute rounded-xl inset-0 md:bg-gradient-to-r from-blue-100 to-transparent "></div>
+            <div className="md:w-2/5 px-4 z-10">
               <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold text-gray-800">
                 Donate Clothes and Share Warmth
               </h2>
@@ -79,29 +75,27 @@ const Banner = () => {
               </button>
             </div>
 
-            {/* Right Section: Content */}
             <div className="md:w-3/5">
               <img
                 src={bannerImg2}
                 alt="Happy Child"
-                className="rounded-lg w-full"
+                className="rounded-lg w-full md:h-80 lg:h-[479px]"
               />
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="relative p-6">
           <div className="flex flex-col md:flex-row lg:px-5 items-center">
-            {/* Left Section: Images */}
+            <div className="absolute rounded-xl inset-0 md:bg-gradient-to-r from-transparent to-blue-100 "></div>
             <div className="md:w-3/5">
               <img
                 src={bannerImg3}
                 alt="Happy Child"
-                className="rounded-lg w-full"
+                className="rounded-lg w-full md:h-80 lg:h-[479px]"
               />
             </div>
 
-            {/* Right Section: Content */}
-            <div className="md:w-2/5 px-4">
+            <div className="md:w-2/5 z-10 px-4">
               <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold text-gray-800">
                 Donate Clothes and Share Warmth
               </h2>
@@ -117,10 +111,10 @@ const Banner = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="relative p-6">
           <div className="flex flex-col-reverse md:flex-row lg:px-5 items-center">
-            {/* Left Section: Images */}
-            <div className="md:w-2/5 px-4">
+            <div className="absolute rounded-xl inset-0 md:bg-gradient-to-r from-blue-100 to-transparent "></div>
+            <div className="md:w-2/5 z-10 px-4">
               <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold text-gray-800">
                 Donate Clothes and Share Warmth
               </h2>
@@ -135,12 +129,11 @@ const Banner = () => {
               </button>
             </div>
 
-            {/* Right Section: Content */}
             <div className="md:w-3/5">
               <img
                 src={bannerImg4}
                 alt="Happy Child"
-                className="rounded-lg w-full"
+                className="rounded-lg w-full md:h-80 lg:h-[479px]"
               />
             </div>
           </div>

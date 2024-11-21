@@ -5,7 +5,7 @@ const Donation = () => {
   const campaigns = useLoaderData();
   console.log(campaigns);
   return (
-    <div className="max-w-screen-xl mx-auto my-12">
+    <div className="max-w-screen-xl mx-auto overflow-hidden my-12">
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-4xl font-bold text-blue-600 mb-4 animate__animated animate__heartBeat animate__slow animate__delay: 2s ">
           Explore Donation Campaigns
