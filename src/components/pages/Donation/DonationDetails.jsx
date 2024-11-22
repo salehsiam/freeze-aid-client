@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import toast from "react-hot-toast";
 import { useLoaderData, useParams } from "react-router-dom";
 
@@ -21,6 +22,9 @@ const DonationDetails = () => {
 
   return (
     <div className="lg:w-2/3 mx-auto p-4">
+      <Helmet>
+        <title>Details||Donation</title>
+      </Helmet>
       <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
         <img
           src={campaign.image}

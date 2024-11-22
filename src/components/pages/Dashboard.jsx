@@ -1,12 +1,16 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <Helmet>
+        <title>Dashboard||FreezeAid</title>
+      </Helmet>
       <div className="card bg-white shadow-md p-6 w-full max-w-md">
         <h1 className="text-2xl font-bold text-center mb-6">
           Welcome, {user.displayName || "User"}!

@@ -1,6 +1,11 @@
+import { Helmet } from "react-helmet";
+
 const HowToHelp = () => {
   return (
     <div>
+      <Helmet>
+        <title>How to help||FreezeAid</title>
+      </Helmet>
       <div className="bg-gray-50 min-h-screen py-10">
         <div className="container mx-auto px-4 text-center mb-10">
           <h1 className="text-4xl font-bold text-blue-500 mb-4">How to Help</h1>

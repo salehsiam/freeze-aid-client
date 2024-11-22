@@ -63,23 +63,26 @@ const Navbar = () => {
             {user?.photoURL ? (
               <img
                 title={user.displayName}
-                className="w-10 h-10  rounded-full"
+                className="w-8 h-8  rounded-full"
                 src={user.photoURL}
                 alt=""
               />
             ) : (
-              <FaUserCircle className="text-4xl" />
+              <FaUserCircle className="text-3xl" />
             )}
           </div>
           <div className="hidden lg:block">
             {user ? (
-              <button className="btn bg-blue-500 text-white" onClick={logout}>
+              <button
+                className="btn bg-blue-500 hover:bg-blue-600 text-white"
+                onClick={logout}
+              >
                 Logout
               </button>
             ) : (
               <Link
                 to="/login"
-                className="btn bg-blue-500 text-white max-sm:hidden "
+                className="btn bg-blue-500 hover:bg-blue-600 text-white max-sm:hidden "
               >
                 Login
               </Link>

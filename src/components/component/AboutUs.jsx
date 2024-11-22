@@ -3,7 +3,7 @@ import { BiSolidDonateHeart } from "react-icons/bi";
 
 const AboutUs = () => {
   return (
-    <div className="bg-blue-100 w-11/12 mx-auto py-16">
+    <div className="bg-blue-100 w-11/12 mx-auto py-16 rounded-xl mb-6">
       <div className=" px-6 flex flex-col md:flex-row items-center gap-12">
         <div className="w-full grid grid-cols-2 gap-1 border border-blue-400 rounded-xl p-2 md:w-1/2">
           <div>
@@ -36,7 +36,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 animate__animated animate__bounceIn animate__delay-0.5s ">
           <p className="text-xl mb-2 text-blue-500 flex items-center">
             <BiSolidDonateHeart className="text-3xl" /> About us
           </p>

@@ -51,7 +51,7 @@ const Banner = () => {
                 comfort to those braving the cold. Together, we can make a
                 difference—one warm gesture at a time.
               </p>
-              <button className="mt-6 px-6 py-2 bg-orange-500 text-white rounded-lg shadow-lg hover:bg-orange-600">
+              <button className="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-lg">
                 Donate Now
               </button>
             </div>
@@ -70,7 +70,7 @@ const Banner = () => {
                 comfort to those braving the cold. Together, we can make a
                 difference—one warm gesture at a time.
               </p>
-              <button className="mt-6 px-6 py-2 bg-orange-500 text-white rounded-lg shadow-lg hover:bg-orange-600">
+              <button className="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-lg ">
                 Donate Now
               </button>
             </div>
@@ -105,7 +105,7 @@ const Banner = () => {
                 comfort to those braving the cold. Together, we can make a
                 difference—one warm gesture at a time.
               </p>
-              <button className="mt-6 px-6 py-2 bg-orange-500 text-white rounded-lg shadow-lg hover:bg-orange-600">
+              <button className="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-lg ">
                 Donate Now
               </button>
             </div>
@@ -124,7 +124,7 @@ const Banner = () => {
                 comfort to those braving the cold. Together, we can make a
                 difference—one warm gesture at a time.
               </p>
-              <button className="mt-6 px-6 py-2 bg-orange-500 text-white rounded-lg shadow-lg hover:bg-orange-600">
+              <button className="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-lg ">
                 Donate Now
               </button>
             </div>

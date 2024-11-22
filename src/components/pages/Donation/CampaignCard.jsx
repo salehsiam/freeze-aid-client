@@ -5,7 +5,11 @@ const CampaignCard = ({ campaign }) => {
   const { id, image, title, description, division } = campaign;
   return (
     <div className="bg-white p-5 shadow-lg rounded-lg overflow-hidden border hover:shadow-xl hover:scale-105 transition-shadow">
-      <img src={image} alt={title} className="w-full h-48 object-cover" />
+      <img
+        src={image}
+        alt={title}
+        className="w-full h-48 rounded-md object-cover"
+      />
       <div className="mt-2">
         <h3 className="text-lg font-bold mb-2">{title}</h3>
         <p className="text-gray-600 text-sm mb-2">{description}</p>

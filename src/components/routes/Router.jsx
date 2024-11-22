@@ -10,6 +10,7 @@ import HowToHelp from "../pages/HowToHelp";
 import Dashboard from "../pages/Dashboard";
 import UpdateProfile from "../component/UpdateProfile";
 import Error from "../pages/Error";
+import ForgotPassword from "../pages/Auth/ForgotPassword";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: "update-profile",
         element: <UpdateProfile></UpdateProfile>,
+      },
+      {
+        path: "forgot-password",
+        element: <ForgotPassword></ForgotPassword>,
       },
       {
         path: "*",
