@@ -15,9 +15,15 @@ import "swiper/css/navigation";
 // import "./swiper-style.css";
 
 // import required modules
+
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
+  const navigate = useNavigate();
+  const handleDonateNowBtn = () => {
+    navigate("/donation");
+  };
   return (
     <div className=" w-11/12  mx-auto mb-2 ">
       <Swiper
@@ -51,7 +57,10 @@ const Banner = () => {
                 comfort to those braving the cold. Together, we can make a
                 difference—one warm gesture at a time.
               </p>
-              <button className="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-lg">
+              <button
+                onClick={handleDonateNowBtn}
+                className="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-lg"
+              >
                 Donate Now
               </button>
             </div>
@@ -70,7 +79,10 @@ const Banner = () => {
                 comfort to those braving the cold. Together, we can make a
                 difference—one warm gesture at a time.
               </p>
-              <button className="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-lg ">
+              <button
+                onClick={handleDonateNowBtn}
+                className="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-lg "
+              >
                 Donate Now
               </button>
             </div>
@@ -105,7 +117,10 @@ const Banner = () => {
                 comfort to those braving the cold. Together, we can make a
                 difference—one warm gesture at a time.
               </p>
-              <button className="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-lg ">
+              <button
+                onClick={handleDonateNowBtn}
+                className="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-lg "
+              >
                 Donate Now
               </button>
             </div>
@@ -124,7 +139,10 @@ const Banner = () => {
                 comfort to those braving the cold. Together, we can make a
                 difference—one warm gesture at a time.
               </p>
-              <button className="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-lg ">
+              <button
+                onClick={handleDonateNowBtn}
+                className="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-lg "
+              >
                 Donate Now
               </button>
             </div>
