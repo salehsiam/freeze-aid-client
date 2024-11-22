@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import { FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
@@ -15,30 +16,72 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  ` font-semibold py-2  ${isActive ? "underline " : ""}`
+                }
+                to="/"
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/donation">Donation</NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  ` font-semibold py-2  ${isActive ? "underline " : ""}`
+                }
+                to="/donation"
+              >
+                Donation
+              </NavLink>
             </li>
 
             <li>
-              <NavLink to="/how-to-help">How to help</NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  ` font-semibold py-2  ${isActive ? "underline " : ""}`
+                }
+                to="/how-to-help"
+              >
+                How to help
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/dashboard">Dashboard</NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  ` font-semibold py-2  ${isActive ? "underline " : ""}`
+                }
+                to="/dashboard"
+              >
+                Dashboard
+              </NavLink>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          {user ? (
-            <button className="btn" onClick={logout}>
-              Logout
-            </button>
-          ) : (
-            <Link to="/login" className="btn max-sm:hidden ">
-              Login
-            </Link>
-          )}
+          <div className="mr-2 border rounded-full">
+            {user?.photoURL ? (
+              <img
+                title={user.displayName}
+                className="w-10 h-10  rounded-full"
+                src={user.photoURL}
+                alt=""
+              />
+            ) : (
+              <FaUserCircle className="text-4xl" />
+            )}
+          </div>
+          <div className="hidden lg:block">
+            {user ? (
+              <button className="btn" onClick={logout}>
+                Logout
+              </button>
+            ) : (
+              <Link to="/login" className="btn max-sm:hidden ">
+                Login
+              </Link>
+            )}
+          </div>
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -58,7 +101,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm right-0 dropdown-content bg-base-200 text-black rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm right-0 dropdown-content bg-base-200 text-black rounded-box z-20 mt-3 w-52 p-2 shadow"
             >
               <li>
                 <NavLink to="/">Home</NavLink>
@@ -73,7 +116,13 @@ const Navbar = () => {
                 <NavLink to="/dashboard">Dashboard</NavLink>
               </li>
               <li>
-                <NavLink to="/login">Login</NavLink>
+                {user ? (
+                  <button className=" text-start bg-blue-300" onClick={logout}>
+                    Logout
+                  </button>
+                ) : (
+                  <NavLink to="/login">Login</NavLink>
+                )}
               </li>
             </ul>
           </div>

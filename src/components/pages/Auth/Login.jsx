@@ -4,7 +4,7 @@ import { AuthContext } from "../../../provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
-  const { userLogin, setUser } = useContext(AuthContext);
+  const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
   const [error, setError] = useState({});
   const location = useLocation();
   const navigate = useNavigate();
@@ -22,10 +22,16 @@ const Login = () => {
       .catch((error) => {
         const errorCode = error.code;
         // const errorMessage = error.message;
-        toast(errorCode);
+        toast.error("invaild email or password");
 
         // ..
       });
+  };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle().then((result) => {
+      navigate(location?.state ? location.state : "/");
+    });
   };
   return (
     <div className="md:min-h-screen w-11/12 mx-auto bg-base-200 flex justify-center items-center">
@@ -68,6 +74,12 @@ const Login = () => {
         <p className="text-center text-sm">
           Don't Have An Account ? <Link to="/register">Register</Link>
         </p>
+        <button
+          onClick={handleGoogleSignIn}
+          className="bg-blue-600 py-2 btn mt-4 text-gray-300 mx-auto"
+        >
+          Sign In With Google
+        </button>
       </div>
     </div>
   );

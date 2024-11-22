@@ -85,13 +85,13 @@ const HowToHelp = () => {
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-4">
             <a
-              href="/campaigns"
+              href="#"
               className="bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600"
             >
               Explore Campaigns
             </a>
             <a
-              href="/volunteer"
+              href="#"
               className="bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600"
             >
               Join as Volunteer
