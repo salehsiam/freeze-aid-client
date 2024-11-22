@@ -73,11 +73,14 @@ const Navbar = () => {
           </div>
           <div className="hidden lg:block">
             {user ? (
-              <button className="btn" onClick={logout}>
+              <button className="btn bg-blue-500 text-white" onClick={logout}>
                 Logout
               </button>
             ) : (
-              <Link to="/login" className="btn max-sm:hidden ">
+              <Link
+                to="/login"
+                className="btn bg-blue-500 text-white max-sm:hidden "
+              >
                 Login
               </Link>
             )}
