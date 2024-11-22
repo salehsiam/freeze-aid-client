@@ -8,7 +8,7 @@ const BecomeVolunteer = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 px-4">
           <img
-            src="https://via.placeholder.com/500x400"
+            src="https://i.ibb.co.com/SJh23J4/1654793377068.jpg"
             alt="Volunteer illustration"
             className="rounded-lg shadow-lg"
           />
