@@ -1,23 +1,26 @@
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const DonationDetails = () => {
   const campaignData = useLoaderData();
-  console.log(campaignData);
   const { id } = useParams();
-  console.log(id);
   const [campaign, setCampaign] = useState([]);
+
   useEffect(() => {
     const CurrentCampaign = campaignData.find(
       (currentCampaign) => currentCampaign.id == id
     );
     setCampaign(CurrentCampaign);
   }, [id, campaignData]);
-  console.log(campaign);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.target.reset();
+    toast.success("Thank you ! We will reach your destination soon");
+  };
 
   return (
     <div className="lg:w-2/3 mx-auto p-4">
-      {/* Campaign Details */}
       <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
         <img
           src={campaign.image}
@@ -30,9 +33,9 @@ const DonationDetails = () => {
           <strong>Division:</strong> {campaign.division}
         </p>
       </div>
-      {/* Donation Form */}
+
       <form
-        // onSubmit={handleSubmit}
+        onSubmit={handleSubmit}
         className="bg-gray-100 p-6 shadow-md rounded-lg"
       >
         <h2 className="text-xl font-semibold mb-4">Donate Items</h2>
@@ -44,8 +47,6 @@ const DonationDetails = () => {
             type="text"
             id="quantity"
             name="quantity"
-            // value={formData.quantity}
-            // onChange={handleInputChange}
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="e.g., 2 jackets, 3 blankets"
             required
@@ -53,18 +54,13 @@ const DonationDetails = () => {
         </div>
 
         <div className="mb-4">
-          <label
-            className="block text-gray-700 font-medium mb-2"
-            // htmlFor="itemType"
-          >
+          <label className="block text-gray-700 font-medium mb-2">
             Item Type
           </label>
           <input
             type="text"
             id="quantity"
             name="quantity"
-            // value={formData.quantity}
-            // onChange={handleInputChange}
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="(e.g., blanket, jacket, sweater"
             required
@@ -79,8 +75,6 @@ const DonationDetails = () => {
             type="text"
             id="pickupLocation"
             name="pickupLocation"
-            // value={formData.pickupLocation}
-            // onChange={handleInputChange}
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="e.g., House 12, Road 5, Dhanmondi, Dhaka"
             required
@@ -94,8 +88,6 @@ const DonationDetails = () => {
           <textarea
             id="notes"
             name="notes"
-            // value={formData.notes}
-            // onChange={handleInputChange}
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="Any additional information..."
           ></textarea>
@@ -108,12 +100,6 @@ const DonationDetails = () => {
           Submit Donation
         </button>
       </form>
-      {/* Toast Message */}
-      {/* {toast && (
-        <div className="fixed bottom-4 right-4 bg-green-500 text-white py-2 px-4 rounded shadow-lg">
-          {toast}
-        </div>
-      )} */}
     </div>
   );
 };

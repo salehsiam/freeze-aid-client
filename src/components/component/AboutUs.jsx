@@ -37,19 +37,19 @@ const AboutUs = () => {
         </div>
 
         <div className="w-full md:w-1/2">
-          <p className="text-xl text-blue-500 flex items-center">
+          <p className="text-xl mb-2 text-blue-500 flex items-center">
             <BiSolidDonateHeart className="text-3xl" /> About us
           </p>
           <h2 className="text-4xl font-bold text-gray-800 mb-6">
             Spreading Warmth, One Act of Kindness at a Time
           </h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <p className=" text-gray-600 mb-4">
             We are dedicated to providing warmth and care to vulnerable
             communities in Bangladesh during the winter. Our platform makes it
             easy for donors and volunteers to connect, ensuring that no one
             endures the cold without proper clothing.
           </p>
-          <p className="text-lg text-gray-600 mb-4">
+          <p className=" text-gray-600 mb-4">
             With your support, we strive to create a future where compassion and
             kindness can bring warmth to every corner of the nation.
           </p>
