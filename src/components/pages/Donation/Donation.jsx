@@ -6,7 +6,7 @@ const Donation = () => {
   const campaigns = useLoaderData();
   console.log(campaigns);
   return (
-    <div className="max-w-screen-xl mx-auto overflow-hidden my-12">
+    <div className="max-w-screen-xl bg-gray-50 mx-auto overflow-hidden py-12 px-4 rounded-xl">
       <Helmet>
         <title>Donation||FreezeAid</title>
       </Helmet>

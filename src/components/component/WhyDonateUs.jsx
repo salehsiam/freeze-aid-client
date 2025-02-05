@@ -4,7 +4,7 @@ import { LiaHandsHelpingSolid } from "react-icons/lia";
 
 const WhyDonateUs = () => {
   return (
-    <section className="bg-blue-100 w-11/12 mx-auto rounded-xl my-6 py-10">
+    <section className="bg-blue-100 w-11/12 mx-auto rounded-xl my-6 py-16 px-4">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-6">Why Donate?</h2>
         <p className="text-lg text-center text-gray-700 mb-8">

@@ -31,7 +31,7 @@ const HowToHelp = () => {
               support vulnerable communities.
             </p>
             <a
-              href="/campaigns"
+              href="/donation"
               className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600"
             >
               Donate Now
@@ -72,7 +72,7 @@ const HowToHelp = () => {
               cause.
             </p>
             <a
-              href="/#share"
+              href="#"
               className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600"
             >
               Share Now

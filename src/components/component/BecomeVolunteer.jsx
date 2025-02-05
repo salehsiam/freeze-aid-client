@@ -3,8 +3,13 @@ import toast from "react-hot-toast";
 import { GiSelfLove } from "react-icons/gi";
 
 const BecomeVolunteer = () => {
+  const handleMassage = (e) => {
+    e.preventDefault();
+    e.target.reset();
+    toast.success("We will contract with you soon.. Thanks");
+  };
   return (
-    <section className="bg-gray-100 w-11/12 mx-auto py-16">
+    <section className="bg-gray-100 w-11/12 mx-auto py-10 px-4 rounded-xl mb-6">
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 px-4">
           <img
@@ -27,20 +32,16 @@ const BecomeVolunteer = () => {
             to become a volunteer and help us make a meaningful difference in
             the lives of others.
           </p>
-          <form className="flex md:w-3/4">
+          <form onSubmit={handleMassage} className="flex md:w-3/4">
             <input
               type="text"
               placeholder="Send Message"
+              name="massage"
               className=" w-full px-4 py-3 border rounded-l-lg  focus:outline-none focus:ring-2 focus:ring-blue-400"
               required
             />
 
-            <button
-              onClick={() => {
-                toast.success("We will contract with you soon.. Thanks");
-              }}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-6 font-bold rounded-r-lg"
-            >
+            <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 font-bold rounded-r-lg">
               Send
             </button>
           </form>

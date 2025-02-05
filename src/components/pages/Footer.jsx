@@ -9,8 +9,8 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-gray-300 py-10">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <a className="md:text-2xl text-xl font-semibold font-orbitron">
+        <div className="text-center md:text-start">
+          <a className="md:text-2xl text-xl font-semibold  font-orbitron">
             FreezeAid
           </a>
           <p>Address: 123 Charity Lane, Dhaka, Bangladesh</p>
@@ -54,7 +54,7 @@ const Footer = () => {
 
         <div className="text-center md:text-right">
           <h3 className="text-xl font-bold mb-4">Stay Connected</h3>
-          <p>© 2024 Donation Platform. All rights reserved.</p>
+          <p>© 2024 Freeze Aid. All rights reserved.</p>
         </div>
       </div>
     </footer>

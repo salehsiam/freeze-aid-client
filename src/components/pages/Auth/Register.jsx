@@ -4,6 +4,7 @@ import { AuthContext } from "../../../provider/AuthProvider";
 import toast from "react-hot-toast";
 import { FaEye } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import { FaGoogle } from "react-icons/fa";
 
 const Register = () => {
   const { createNewUser, setUser, updateUserProfile, signInWithGoogle } =
@@ -116,7 +117,7 @@ const Register = () => {
         </form>
         <p className="text-center text-sm">
           Already Have An Account ?{" "}
-          <Link className="text-blue-800" to="/login">
+          <Link className="text-blue-800 underline" to="/login">
             Login
           </Link>
         </p>
@@ -124,6 +125,7 @@ const Register = () => {
           onClick={handleGoogleSignIn}
           className="bg-blue-600 py-2 btn mt-4 text-gray-300 mx-auto"
         >
+          <FaGoogle className="text-white" />
           Sign In With Google
         </button>
       </div>

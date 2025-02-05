@@ -4,6 +4,7 @@ import { AuthContext } from "../../../provider/AuthProvider";
 import toast from "react-hot-toast";
 import { FaEye } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const { userLogin, setUser, signInWithGoogle } = useContext(AuthContext);
@@ -89,14 +90,14 @@ const Login = () => {
           Forgot your password?
           <button
             onClick={handleForgotPassword}
-            className="text-blue-500 underline"
+            className="text-blue-500 underline ml-1 mb-2"
           >
             Reset Password
           </button>
         </p>
         <p className="text-center text-sm">
           Don't Have An Account ?
-          <Link className="text-blue-800" to="/register">
+          <Link className="text-blue-800 underline ml-1" to="/register">
             Register
           </Link>
         </p>
@@ -104,6 +105,7 @@ const Login = () => {
           onClick={handleGoogleSignIn}
           className="bg-blue-600 hover:bg-blue-700 py-2 btn mt-4 text-gray-300 mx-auto"
         >
+          <FaGoogle className="text-white" />
           Sign In With Google
         </button>
       </div>

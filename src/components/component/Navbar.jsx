@@ -6,7 +6,7 @@ import { FaUserCircle } from "react-icons/fa";
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
   return (
-    <div className="w-11/12 mx-auto   text-blue-500 mt-4">
+    <div className="w-11/12 mx-auto  text-blue-500 mt-4">
       <div className="navbar md:px-10">
         <div className="navbar-start">
           <a className="md:text-2xl text-xl font-semibold font-orbitron">
@@ -14,11 +14,13 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="gap-6 menu-horizontal px-1">
             <li>
               <NavLink
                 className={({ isActive }) =>
-                  ` font-semibold py-2  ${isActive ? "underline " : ""}`
+                  ` font-semibold text-sm py-2 px-2 rounded-lg  ${
+                    isActive ? "  underline  " : ""
+                  }`
                 }
                 to="/"
               >
@@ -28,7 +30,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 className={({ isActive }) =>
-                  ` font-semibold py-2  ${isActive ? "underline " : ""}`
+                  ` font-semibold text-sm py-2  ${isActive ? "underline " : ""}`
                 }
                 to="/donation"
               >
@@ -39,7 +41,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 className={({ isActive }) =>
-                  ` font-semibold py-2  ${isActive ? "underline " : ""}`
+                  ` font-semibold text-sm py-2  ${isActive ? "underline " : ""}`
                 }
                 to="/how-to-help"
               >
@@ -49,7 +51,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 className={({ isActive }) =>
-                  ` font-semibold py-2  ${isActive ? "underline " : ""}`
+                  ` font-semibold text-sm py-2  ${isActive ? "underline " : ""}`
                 }
                 to="/dashboard"
               >

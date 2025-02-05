@@ -4,7 +4,7 @@ import "animate.css";
 const HowItWorks = () => {
   return (
     <div>
-      <section className="w-11/12 rounded-xl overflow-hidden mx-auto px-4 bg-blue-100 py-10">
+      <section className="w-11/12 rounded-xl  overflow-hidden mx-auto px-4 bg-blue-100 py-16">
         <div className="container mx-auto px-4">
           <h2 className="animate__animated animate__heartBeat animate__slow animate__delay: 2s animate__repeat-3 text-3xl font-bold text-center mb-4">
             How It Works
@@ -62,32 +62,23 @@ const HowItWorks = () => {
                 <h4 className="font-semibold">Rajshahi</h4>
                 <p className="text-gray-600">Shaheb Bazar, New Market</p>
               </div>
+              <div className="bg-gray-50 p-4 rounded-lg shadow-md">
+                <h4 className="font-semibold">Khulna</h4>
+                <p className="text-gray-600">Mujgunni Residential Area</p>
+              </div>
+              <div className="bg-gray-50 p-4 rounded-lg shadow-md">
+                <h4 className="font-semibold">Barisal</h4>
+                <p className="text-gray-600">TownHall</p>
+              </div>
+              <div className="bg-gray-50 p-4 rounded-lg shadow-md">
+                <h4 className="font-semibold">Rangpur</h4>
+                <p className="text-gray-600">TownHall</p>
+              </div>
+              <div className="bg-gray-50 p-4 rounded-lg shadow-md">
+                <h4 className="font-semibold">Mymensingh</h4>
+                <p className="text-gray-600">Notun Bazar</p>
+              </div>
             </div>
-          </div>
-
-          <div className="mt-10">
-            <h3 className="text-2xl font-bold mb-4">Supported Divisions</h3>
-            <p className="text-gray-600">
-              We are actively working in the following divisions:
-            </p>
-            <ul className="list-disc pl-6 mt-4 text-gray-600">
-              <li>Dhaka</li>
-              <li>Chittagong</li>
-              <li>Sylhet</li>
-              <li>Rajshahi</li>
-              <li>Khulna</li>
-              <li>Barisal</li>
-              <li>Rangpur</li>
-              <li>Mymensingh</li>
-            </ul>
-          </div>
-          <div className="mt-10">
-            <Link
-              to="/donation"
-              className="bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600"
-            >
-              Get Started
-            </Link>
           </div>
         </div>
       </section>
