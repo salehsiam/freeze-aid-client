@@ -1,6 +1,6 @@
 # ❄️ FREEZEAID - Winter Donation Web Application
 
-![FreezeAid Banner](https://ibb.co.com/xKCG0G8r)
+![FreezeAid Banner](https://i.ibb.co.com/j96G2GZj/Screenshot-11.png)
 
 **FreezeAid** is a donation platform that connects **donors** with **volunteers** to distribute winter clothing to vulnerable populations in **Bangladesh**. It enables users to browse donation campaigns, contribute essential items, and assist in organizing donation drives during the colder months.
 
@@ -89,7 +89,7 @@
 1️⃣ **Clone the Repository**
 
 ```sh
-git clone https://github.com/yourusername/freezeaid.git
+git clone https://github.com/salehsiam/freezeaid.git
 cd freezeaid
 ```
 
@@ -132,7 +132,7 @@ This project is licensed under the **MIT License**.
 
 ---
 
-👨‍💻 **Developed with ❤️ by [Your Name](https://github.com/yourusername)**
+👨‍💻 **Developed with ❤️ by [saleh siam](https://github.com/salehsiam)**
 
 ```
 
