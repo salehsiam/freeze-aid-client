@@ -1,6 +1,6 @@
 # ❄️ FREEZEAID - Winter Donation Web Application
 
-![FreezeAid Banner](https://i.ibb.co.com/j96G2GZj/Screenshot-11.png)
+![FreezeAid Banner](https://ibb.co.com/xKCG0G8r)
 
 **FreezeAid** is a donation platform that connects **donors** with **volunteers** to distribute winter clothing to vulnerable populations in **Bangladesh**. It enables users to browse donation campaigns, contribute essential items, and assist in organizing donation drives during the colder months.
 
